@@ -47,6 +47,7 @@
   --color-background: var(--color-white);
   --color-surface: var(--color-white);
   --color-surface-2: var(--color-warm-white);
+  --color-surface-rgb: var(--color-white-rgb);
   --color-text-primary: var(--color-charcoal);
   --color-text-secondary: var(--color-slate);
   --color-brand-dark: var(--color-navy);
@@ -56,6 +57,35 @@
   --color-border: var(--color-cool-gray);
   --color-accent-teal: var(--color-teal);
 }
+
+:root[data-theme="dark"] {
+  --color-ink: #0A1420;
+  --color-ink-2: #0F1B2C;
+  --color-ink-3: #16263B;
+  --color-ink-rgb: 10, 20, 32;
+  --color-ink-2-rgb: 15, 27, 44;
+
+  --color-background: var(--color-ink);
+  --color-surface: var(--color-ink-2);
+  --color-surface-2: var(--color-ink-3);
+  --color-surface-rgb: var(--color-ink-2-rgb);
+  --color-text-primary: var(--color-warm-white);
+  --color-text-secondary: var(--color-slate-300);
+  --color-brand-dark: var(--color-warm-white);
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-brand-soft: rgba(var(--color-blue-bright-rgb), 0.14);
+  color-scheme: dark;
+}
+
+.theme-icon-moon, .theme-toggle-label-moon { display: inline-block; }
+.theme-icon-sun, .theme-toggle-label-sun   { display: none; }
+:root[data-theme="dark"] .theme-icon-moon,
+:root[data-theme="dark"] .theme-toggle-label-moon { display: none; }
+:root[data-theme="dark"] .theme-icon-sun,
+:root[data-theme="dark"] .theme-toggle-label-sun  { display: inline-block; }
+
+#theme-toggle:hover,
+#theme-toggle-mobile:hover { background-color: var(--color-surface-2); }
 
 *, *::before, *::after { box-sizing: border-box; }
 

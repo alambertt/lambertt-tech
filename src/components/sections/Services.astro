@@ -1,0 +1,196 @@
+---
+import { Image } from 'astro:assets';
+import { ico } from '../../lib/icons';
+
+const services = [
+  {
+    icon: 'monitor',
+    title: 'One-page websites',
+    detail:
+      'A single page with everything a customer needs — your services, photos, hours, and a way to reach you. Fast to load, easy to update.',
+    note: 'Most local businesses only need this.',
+  },
+  {
+    icon: 'refresh',
+    title: 'Website refreshes',
+    detail:
+      "If your current site is outdated, hard to use on a phone, or just doesn't represent you well anymore — I can rebuild it properly.",
+  },
+  {
+    icon: 'phone-l',
+    title: 'Click-to-call & directions',
+    detail:
+      'A phone number that dials when tapped, and an address that opens in Google Maps. Small things your customers expect to just work.',
+  },
+  {
+    icon: 'calendar',
+    title: 'Booking integrations',
+    detail:
+      'I connect your site to whatever scheduling tool you already use — Setmore, Square, OpenTable, Vagaro. You keep your workflow, customers can book directly.',
+  },
+  {
+    icon: 'camera',
+    title: 'Photo & content cleanup',
+    detail:
+      "Good photos and clear writing make a bigger difference than design. I'll organize your images, cut the fluff, and make sure everything reads well on a small screen.",
+  },
+  {
+    icon: 'search-l',
+    title: 'Local SEO basics',
+    detail:
+      'Page titles, meta descriptions, structured data, and Google Business setup — the fundamentals that help nearby customers find you when they search.',
+  },
+];
+---
+
+<section
+  id='services'
+  class='px-5 sm:px-8 py-20 md:py-28'
+  style='background-color: var(--color-surface-2);'
+  aria-labelledby='services-heading'
+>
+  <div class='mx-auto max-w-6xl'>
+    <div class='grid gap-10 lg:grid-cols-[1fr_0.9fr] lg:items-center'>
+      <div class='max-w-lg'>
+        <p
+          class='text-xs font-bold tracking-widest uppercase'
+          style='color: var(--color-brand-blue);'
+        >
+          What I do
+        </p>
+        <h2
+          id='services-heading'
+          class='mt-3 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl'
+          style='color: var(--color-brand-dark); letter-spacing: -0.02em;'
+        >
+          Practical help, not a package deal
+        </h2>
+        <p
+          class='mt-4 text-base leading-relaxed'
+          style='color: var(--color-text-secondary);'
+        >
+          Every project is scoped to what your business actually needs. You don't pay for things you won't use.
+        </p>
+        <div
+          class='mt-6 inline-flex items-center gap-2.5 text-sm font-semibold'
+          style='color: var(--color-brand-dark);'
+        >
+          <span
+            class='flex h-7 w-7 items-center justify-center rounded-full'
+            style='background-color: var(--color-brand-soft); color: var(--color-brand-blue);'
+            set:html={ico('check')}
+          />
+          Six focused services, picked à la carte.
+        </div>
+      </div>
+
+      <!-- Editorial image -->
+      <div
+        class='relative rounded-3xl overflow-hidden'
+        style='aspect-ratio: 4 / 3; box-shadow: 0 24px 48px -16px rgba(var(--color-navy-rgb),0.20);'
+      >
+        <Image
+          src='https://images.pexels.com/photos/374074/pexels-photo-374074.jpeg?auto=compress&cs=tinysrgb&w=900&h=700&fit=crop'
+          alt='Minimal designer workspace — laptop, notebook, and coffee on a light desk'
+          width={900}
+          height={700}
+          class='absolute inset-0 h-full w-full object-cover'
+          loading='lazy'
+        />
+        <div
+          class='absolute inset-0'
+          style='background: linear-gradient(140deg, rgba(var(--color-navy-rgb),0) 40%, rgba(var(--color-navy-rgb),0.45) 100%);'
+          aria-hidden='true'
+        >
+        </div>
+        <div class='absolute bottom-5 left-5 right-5 flex items-end justify-between gap-4'>
+          <div
+            class='rounded-2xl px-4 py-3'
+            style='background-color: rgba(var(--color-white-rgb),0.92); backdrop-filter: blur(8px);'
+          >
+            <p
+              class='text-[11px] font-bold uppercase tracking-[0.18em]'
+              style='color: var(--color-brand-blue);'
+            >
+              Studio of one
+            </p>
+            <p
+              class='text-sm font-semibold mt-0.5'
+              style='color: var(--color-brand-dark);'
+            >
+              Designed and built by hand
+            </p>
+          </div>
+          <span
+            class='shrink-0 hidden sm:inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[11px] font-semibold text-white'
+            style='background-color: rgba(var(--color-navy-rgb),0.65); backdrop-filter: blur(6px);'
+          >
+            <span
+              class='h-1.5 w-1.5 rounded-full'
+              style='background-color: var(--color-success-green);'></span>
+            Booking April – June
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Services grid -->
+    <dl
+      class='mt-12 grid gap-px sm:grid-cols-2 lg:grid-cols-3'
+      style='background-color: var(--color-border); border-radius: 24px; overflow: hidden; box-shadow: 0 1px 4px 0 rgba(var(--color-black-rgb),0.06);'
+    >
+      {
+        services.map(s => (
+          <div
+            class='group relative flex flex-col gap-0 transition-all duration-200 hover:z-10'
+            style='background-color: var(--color-background);'
+          >
+            <div
+              class='absolute left-0 top-6 bottom-6 w-0.5 rounded-full opacity-0 transition-all duration-300 group-hover:opacity-100'
+              style='background-color: var(--color-brand-blue);'
+            />
+            <div class='flex flex-col gap-4 p-7 h-full'>
+              <div
+                class='flex h-10 w-10 shrink-0 items-center justify-center rounded-full'
+                style='background-color: var(--color-brand-soft); color: var(--color-brand-blue);'
+                set:html={ico(s.icon)}
+              />
+              <div class='flex flex-col gap-2 flex-1'>
+                <dt
+                  class='text-[15px] font-semibold leading-snug'
+                  style='color: var(--color-brand-dark);'
+                >
+                  {s.title}
+                </dt>
+                <dd
+                  class='text-sm leading-relaxed'
+                  style='color: var(--color-text-secondary);'
+                >
+                  {s.detail}
+                </dd>
+                {s.note && (
+                  <p
+                    class='mt-auto pt-3 text-xs font-semibold'
+                    style='color: var(--color-brand-blue);'
+                  >
+                    {s.note}
+                  </p>
+                )}
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </dl>
+
+    <div class='mt-10'>
+      <a
+        href='#contact'
+        class='inline-flex items-center gap-2 text-sm font-semibold'
+        style='color: var(--color-brand-blue);'
+      >
+        Not sure what you need? Let's talk — it's free. <span set:html={ico('arrow-right')} />
+      </a>
+    </div>
+  </div>
+</section>

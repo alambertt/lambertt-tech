@@ -1,0 +1,428 @@
+---
+import { phone, phoneHref, email } from '../../lib/contact';
+import { ico } from '../../lib/icons';
+---
+
+<section
+  class='relative overflow-hidden'
+  style='background-color: var(--color-background);'
+>
+  <div
+    class='pointer-events-none absolute inset-0'
+    style='background-image: radial-gradient(circle, var(--color-brand-blue) 1px, transparent 1px); background-size: 28px 28px; opacity: 0.04;'
+    aria-hidden='true'
+  >
+  </div>
+  <div
+    class='pointer-events-none absolute -top-32 right-0 h-[600px] w-[600px] rounded-full'
+    style='background: radial-gradient(circle at center, rgba(var(--color-blue-rgb),0.10) 0%, transparent 70%);'
+    aria-hidden='true'
+  >
+  </div>
+
+  <div class='relative mx-auto max-w-6xl px-5 sm:px-8 pt-14 pb-16 md:pt-20 md:pb-24 lg:pt-24 lg:pb-28'>
+    <div class='grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center'>
+      <!-- Left: copy -->
+      <div>
+        <div
+          class='animate-fade-up mb-6 inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-sm font-semibold'
+          style='background-color: var(--color-brand-soft); border-color: rgba(var(--color-blue-rgb),0.2); color: var(--color-brand-blue);'
+        >
+          <span
+            class='inline-flex'
+            set:html={ico('map-pin')}
+          />
+          Based in Jupiter, Florida
+        </div>
+
+        <h1
+          class='animate-fade-up delay-100 text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl lg:text-[3.25rem]'
+          style='color: var(--color-brand-dark);'
+        >
+          Websites that help local businesses
+          <span
+            class='whitespace-nowrap'
+            style='color: var(--color-brand-blue);'
+            >get found.</span
+          >
+        </h1>
+
+        <p
+          class='animate-fade-up delay-200 mt-5 text-lg leading-relaxed'
+          style='color: var(--color-text-secondary);'
+        >
+          Clean, mobile-first sites for salons, restaurants, boutiques, and local services across Palm Beach County.
+        </p>
+
+        <div class='animate-fade-up delay-300 mt-8 flex flex-col gap-3 sm:flex-row sm:items-center'>
+          <a
+            href='#contact'
+            class='inline-flex items-center justify-center gap-2.5 rounded-full px-8 text-base font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:shadow-2xl active:translate-y-0 min-h-[56px]'
+            style='background-color: var(--color-brand-blue); box-shadow: 0 4px 20px 0 rgba(var(--color-blue-rgb),0.30);'
+          >
+            Get a free mockup <span
+              class='inline-flex'
+              set:html={ico('arrow-right')}
+            />
+          </a>
+          <a
+            href='#work'
+            class='inline-flex items-center justify-center gap-2 rounded-full border px-8 text-base font-semibold transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 min-h-[56px]'
+            style='background-color: var(--color-surface); border-color: var(--color-border); color: var(--color-brand-dark);'
+          >
+            See examples
+          </a>
+        </div>
+
+        <div class='animate-fade-up delay-400 mt-7 flex flex-col gap-2.5 sm:flex-row sm:gap-6'>
+          <a
+            href={phoneHref}
+            class='inline-flex items-center gap-2.5 text-sm font-medium transition-opacity hover:opacity-70'
+            style='color: var(--color-text-secondary);'
+          >
+            <span
+              class='flex h-8 w-8 items-center justify-center rounded-full shrink-0'
+              style='background-color: var(--color-brand-soft); color: var(--color-brand-blue);'
+              set:html={ico('phone')}
+            />
+            {phone}
+          </a>
+          <a
+            href={`mailto:${email}`}
+            class='inline-flex items-center gap-2.5 text-sm font-medium transition-opacity hover:opacity-70'
+            style='color: var(--color-text-secondary);'
+          >
+            <span
+              class='flex h-8 w-8 items-center justify-center rounded-full shrink-0'
+              style='background-color: var(--color-brand-soft); color: var(--color-brand-blue);'
+              set:html={ico('mail')}
+            />
+            {email}
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: hero carousel -->
+      <div class='animate-fade-in delay-200 relative flex items-center justify-center lg:justify-end'>
+        <div
+          class='absolute inset-0 rounded-3xl'
+          style='background: radial-gradient(ellipse at center, rgba(var(--color-blue-rgb),0.14) 0%, transparent 70%); transform: scale(1.15);'
+          aria-hidden='true'
+        >
+        </div>
+
+        <div
+          id='hero-carousel'
+          class='relative w-full max-w-[480px] rounded-3xl border overflow-hidden'
+          style='background-color: var(--color-surface); border-color: var(--color-border); box-shadow: 0 24px 64px -12px rgba(var(--color-navy-rgb),0.18), 0 4px 16px -4px rgba(var(--color-blue-rgb),0.14);'
+          aria-roledescription='carousel'
+          aria-label='Sample local business websites'
+        >
+          <!-- Browser chrome -->
+          <div
+            class='flex items-center gap-3 px-4 py-3 border-b'
+            style='background-color: var(--color-cool-gray-100); border-color: var(--color-border);'
+          >
+            <div
+              class='flex gap-1.5'
+              aria-hidden='true'
+            >
+              <div
+                class='h-3 w-3 rounded-full'
+                style='background-color: var(--color-mac-red);'
+              >
+              </div>
+              <div
+                class='h-3 w-3 rounded-full'
+                style='background-color: var(--color-mac-amber);'
+              >
+              </div>
+              <div
+                class='h-3 w-3 rounded-full'
+                style='background-color: var(--color-mac-green);'
+              >
+              </div>
+            </div>
+            <div
+              class='flex flex-1 items-center gap-2 rounded-full px-3 py-1.5 text-xs'
+              style='background-color: var(--color-surface); color: var(--color-text-secondary); border: 1px solid var(--color-border);'
+            >
+              <div
+                class='h-2 w-2 rounded-full shrink-0'
+                style='background-color: var(--color-accent-teal);'
+              >
+              </div>
+              <span
+                id='carousel-url'
+                class='transition-opacity duration-300'
+                >coastalcafe.com</span
+              >
+            </div>
+          </div>
+
+          <!-- Carousel stage (slides injected by JS) -->
+          <div
+            id='carousel-stage'
+            class='carousel-stage relative'
+            aria-live='polite'
+          >
+          </div>
+
+          <!-- Dot indicators — float over the image top-right -->
+          <div
+            id='carousel-dots'
+            class='absolute z-20 flex items-center gap-1.5 rounded-full px-2.5 py-1.5'
+            style='top: 64px; right: 12px; background-color: rgba(var(--color-navy-rgb),0.40); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);'
+            role='tablist'
+            aria-label='Choose a sample website'
+          >
+          </div>
+        </div>
+
+        <!-- Floating badge: mobile-first -->
+        <div
+          class='absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 rounded-2xl border px-4 py-3'
+          style='background-color: var(--color-surface); border-color: var(--color-border); box-shadow: 0 8px 32px -4px rgba(var(--color-navy-rgb),0.16);'
+          aria-hidden='true'
+        >
+          <div class='flex items-center gap-3'>
+            <span
+              class='flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-white'
+              style='background-color: var(--color-brand-blue);'
+              set:html={ico('smartphone')}
+            />
+            <div>
+              <p
+                class='text-xs font-bold'
+                style='color: var(--color-text-primary);'
+              >
+                Mobile-first
+              </p>
+              <p
+                class='text-[11px]'
+                style='color: var(--color-text-secondary);'
+              >
+                Works on any device
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating badge: SEO -->
+        <div
+          class='absolute -top-4 -right-4 sm:-top-5 sm:-right-5 rounded-2xl border px-4 py-3'
+          style='background-color: var(--color-surface); border-color: var(--color-border); box-shadow: 0 8px 32px -4px rgba(var(--color-navy-rgb),0.16);'
+          aria-hidden='true'
+        >
+          <div class='flex items-center gap-2.5'>
+            <span
+              class='flex h-10 w-10 shrink-0 items-center justify-center rounded-full'
+              style='background-color: var(--color-brand-soft); color: var(--color-brand-blue);'
+              set:html={ico('search-l')}
+            />
+            <div>
+              <p
+                class='text-sm font-bold'
+                style='color: var(--color-text-primary);'
+              >
+                Found on Google
+              </p>
+              <div
+                class='flex gap-0.5 mt-1'
+                style='color: var(--color-brand-blue);'
+              >
+                <span set:html={ico('star')} /><span set:html={ico('star')} /><span
+                  set:html={ico('star')}
+                /><span set:html={ico('star')} /><span set:html={ico('star')} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  (function () {
+    const PHONE_SM =
+      '<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>';
+    const MAP_PIN_SM =
+      '<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>';
+
+    const SLIDES = [
+      {
+        name: 'Coastal Café',
+        slug: 'coastalcafe.com',
+        meta: 'Jupiter, FL · Open until 9 pm',
+        chips: ['Menu', 'Hours', 'Contact'],
+        cta: 'Order now',
+        footerCta: 'Get directions',
+        img: 'https://images.pexels.com/photos/1813504/pexels-photo-1813504.jpeg?auto=compress&cs=tinysrgb&w=960&h=540&fit=crop',
+        imgAlt: 'Warm, candlelit café interior with wood tables',
+      },
+      {
+        name: 'Palm Beauty Studio',
+        slug: 'palmbeautystudio.com',
+        meta: 'Jupiter, FL · Appointments available',
+        chips: ['Services', 'Stylists', 'Reviews'],
+        cta: 'Book now',
+        footerCta: 'View hours',
+        img: 'https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&cs=tinysrgb&w=960&h=540&fit=crop',
+        imgAlt: 'Elegant hair and beauty studio with a stylist at work',
+      },
+      {
+        name: 'BlueWave Home Services',
+        slug: 'bluewavehome.com',
+        meta: 'Palm Beach County · Same-week service',
+        chips: ['Services', 'Areas', 'Reviews'],
+        cta: 'Request quote',
+        footerCta: 'Service areas',
+        img: 'https://images.pexels.com/photos/4108714/pexels-photo-4108714.jpeg?auto=compress&cs=tinysrgb&w=960&h=540&fit=crop',
+        imgAlt: 'Modern Florida home exterior with manicured landscaping',
+        imgFallback:
+          'https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg?auto=compress&cs=tinysrgb&w=960&h=540&fit=crop',
+      },
+      {
+        name: 'Shoreline Boutique',
+        slug: 'shorelineboutique.com',
+        meta: 'Jupiter, FL · New arrivals',
+        chips: ['Shop', 'Lookbook', 'Visit'],
+        cta: 'Shop now',
+        footerCta: 'Visit store',
+        img: 'https://images.pexels.com/photos/3965545/pexels-photo-3965545.jpeg?auto=compress&cs=tinysrgb&w=960&h=540&fit=crop',
+        imgAlt: 'Curated boutique clothing rack with elegant neutral tones',
+      },
+    ];
+
+    const stageEl = document.getElementById('carousel-stage');
+    const dotsEl = document.getElementById('carousel-dots');
+    const urlEl = document.getElementById('carousel-url');
+    const wrapEl = document.getElementById('hero-carousel');
+
+    if (!stageEl || !dotsEl || !urlEl || !wrapEl) return;
+
+    stageEl.innerHTML = SLIDES.map(
+      (s, i) => `
+    <article class="carousel-slide ${i === 0 ? 'is-active' : ''}" role="tabpanel"
+             aria-roledescription="slide" aria-label="${i + 1} of ${SLIDES.length}: ${s.name}"
+             ${i !== 0 ? 'aria-hidden="true"' : ''}>
+      <div class="relative overflow-hidden" style="height: 220px;">
+        <img
+          src="${s.img}"
+          alt="${s.imgAlt}"
+          class="carousel-slide-image absolute inset-0 h-full w-full object-cover"
+          loading="${i === 0 ? 'eager' : 'lazy'}"
+          decoding="async"
+          ${s.imgFallback ? `onerror="this.onerror=null;this.src='${s.imgFallback}';"` : ''}
+        />
+        <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(var(--color-navy-rgb),0.05) 0%, rgba(var(--color-navy-rgb),0.65) 100%);" aria-hidden="true"></div>
+        <div class="absolute bottom-0 left-0 right-0 px-5 py-4">
+          <p class="text-base font-bold text-white leading-tight">${s.name}</p>
+          <p class="text-xs mt-0.5" style="color: rgba(var(--color-white-rgb),0.85);">${s.meta}</p>
+        </div>
+      </div>
+      <div class="px-5 py-4 space-y-3">
+        <div class="flex items-center justify-between gap-2" aria-hidden="true">
+          <div class="flex gap-5 pb-1">
+            ${s.chips.map((c, ci) => `<div class="text-xs ${ci === 0 ? 'font-semibold pb-1 border-b-2' : 'font-medium'}" style="${ci === 0 ? 'color: var(--color-text-primary); border-color: var(--color-text-primary);' : 'color: var(--color-text-secondary);'}">${c}</div>`).join('')}
+          </div>
+          <div class="rounded-full px-3 py-1.5 text-xs font-semibold whitespace-nowrap" style="border: 1px solid var(--color-brand-blue); color: var(--color-brand-blue);">${s.cta}</div>
+        </div>
+        <div class="space-y-2" aria-hidden="true">
+          <div class="flex gap-2 items-center"><div class="h-2.5 w-2.5 rounded-full shrink-0" style="background-color: var(--color-accent-teal);"></div><div class="h-2 w-32 rounded-full" style="background-color: var(--color-brand-soft);"></div></div>
+          <div class="flex gap-2 items-center"><div class="h-2.5 w-2.5 rounded-full shrink-0" style="background-color: var(--color-accent-teal);"></div><div class="h-2 w-40 rounded-full" style="background-color: var(--color-brand-soft);"></div></div>
+          <div class="flex gap-2 items-center"><div class="h-2.5 w-2.5 rounded-full shrink-0" style="background-color: var(--color-accent-teal);"></div><div class="h-2 w-28 rounded-full" style="background-color: var(--color-brand-soft);"></div></div>
+        </div>
+      </div>
+      <div class="flex items-center justify-between px-5 py-3 border-t" style="border-color: var(--color-border); background-color: var(--color-warm-white);" aria-hidden="true">
+        <div class="flex items-center gap-1.5"><span style="color: var(--color-brand-blue);">${PHONE_SM}</span><div class="h-2 w-20 rounded-full" style="background-color: var(--color-brand-soft);"></div></div>
+        <div class="flex items-center gap-1.5"><span style="color: var(--color-brand-blue);">${MAP_PIN_SM}</span><div class="h-2 w-16 rounded-full" style="background-color: var(--color-brand-soft);"></div></div>
+        <div class="text-xs font-semibold whitespace-nowrap inline-flex items-center gap-0.5" style="color: var(--color-brand-blue);">${s.footerCta} <span aria-hidden="true">&rsaquo;</span></div>
+      </div>
+    </article>
+  `,
+    ).join('');
+
+    dotsEl.innerHTML = SLIDES.map(
+      (s, i) => `
+    <button class="carousel-dot ${i === 0 ? 'is-active' : ''}" type="button"
+            role="tab" data-index="${i}"
+            aria-label="Show ${s.name}"
+            aria-selected="${i === 0 ? 'true' : 'false'}"></button>
+  `,
+    ).join('');
+
+    const slideEls = stageEl.querySelectorAll('.carousel-slide');
+    const dotBtns = dotsEl.querySelectorAll('.carousel-dot');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const ROTATE_MS = 5500;
+    let current = 0;
+    let timer = null;
+
+    function goTo(i) {
+      current = ((i % SLIDES.length) + SLIDES.length) % SLIDES.length;
+      slideEls.forEach((el, idx) => {
+        const active = idx === current;
+        el.classList.toggle('is-active', active);
+        el.setAttribute('aria-hidden', active ? 'false' : 'true');
+      });
+      dotBtns.forEach((el, idx) => {
+        const active = idx === current;
+        el.classList.toggle('is-active', active);
+        el.setAttribute('aria-selected', String(active));
+      });
+      urlEl.style.opacity = '0';
+      setTimeout(() => {
+        urlEl.textContent = SLIDES[current].slug;
+        urlEl.style.opacity = '1';
+      }, 200);
+    }
+
+    function start() {
+      if (reducedMotion) return;
+      stop();
+      timer = setInterval(() => goTo(current + 1), ROTATE_MS);
+    }
+    function stop() {
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    dotsEl.addEventListener('click', e => {
+      const btn = e.target.closest('.carousel-dot');
+      if (!btn) return;
+      goTo(parseInt(btn.dataset.index, 10));
+      start();
+    });
+
+    wrapEl.addEventListener('mouseenter', stop);
+    wrapEl.addEventListener('mouseleave', start);
+    wrapEl.addEventListener('focusin', stop);
+    wrapEl.addEventListener('focusout', start);
+    wrapEl.addEventListener('touchstart', stop, { passive: true });
+    wrapEl.addEventListener('touchend', () => setTimeout(start, 2500), { passive: true });
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) stop();
+      else start();
+    });
+
+    wrapEl.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        goTo(current + 1);
+        start();
+      }
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        goTo(current - 1);
+        start();
+      }
+    });
+
+    start();
+  })();
+</script>

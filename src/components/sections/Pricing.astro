@@ -1,0 +1,165 @@
+---
+import { ico } from '../../lib/icons';
+
+const factors = [
+  'Number of pages',
+  'Booking integration',
+  'Photo cleanup',
+  'Service or menu list',
+  'Local SEO basics',
+  'Existing site refresh',
+];
+
+const tiers = [
+  {
+    featured: true,
+    title: 'One-page local business website',
+    detail: 'A focused mobile-first site with your services, photos, contact info, click-to-call, and directions.',
+    price: '$300–$800',
+  },
+  {
+    featured: false,
+    title: 'Larger refresh or multi-page site',
+    detail: 'A fuller rebuild with dedicated pages, menus, galleries, booking tools, content cleanup, or extra structure.',
+    price: '$800–$2,000',
+  },
+];
+---
+
+<section
+  id='pricing'
+  class='px-5 py-20 sm:px-8 lg:px-10'
+  style='background-color: var(--color-background);'
+>
+  <div class='mx-auto max-w-6xl'>
+    <div class='grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start'>
+      <div class='lg:sticky lg:top-24'>
+        <p
+          class='mb-3 text-[11px] font-bold uppercase tracking-[0.24em]'
+          style='color: var(--color-brand-blue);'
+        >
+          Pricing
+        </p>
+        <h2
+          class='text-4xl font-bold tracking-[-0.055em] sm:text-5xl'
+          style='color: var(--color-brand-dark);'
+        >
+          Clear pricing, no package trap.
+        </h2>
+        <p
+          class='mt-5 max-w-md text-base leading-7'
+          style='color: var(--color-text-secondary);'
+        >
+          Most local business websites fall within a simple range. The final quote depends on what needs to be
+          built, cleaned up, or connected.
+        </p>
+        <div
+          class='mt-7 inline-flex items-center gap-3 rounded-full border px-5 py-3'
+          style='border-color: var(--color-border); background-color: var(--color-surface); box-shadow: 0 1px 4px rgba(var(--color-black-rgb),0.04);'
+        >
+          <span
+            style='color: var(--color-brand-blue);'
+            set:html={ico('badge-dollar')}
+          />
+          <p
+            class='text-sm font-semibold'
+            style='color: var(--color-brand-dark);'
+          >
+            Quote confirmed before work starts
+          </p>
+        </div>
+      </div>
+
+      <div class='space-y-4'>
+        {
+          tiers.map(tier => (
+            <div
+              class='rounded-3xl border p-5 sm:p-6'
+              style={
+                tier.featured
+                  ? 'border-color: rgba(var(--color-blue-rgb),0.25); background: linear-gradient(135deg, var(--color-brand-soft), var(--color-surface)); box-shadow: 0 12px 28px -10px rgba(var(--color-blue-rgb),0.20);'
+                  : 'border-color: var(--color-border); background-color: var(--color-surface);'
+              }
+            >
+              <div class='flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between'>
+                <div>
+                  <h3
+                    class='text-base font-semibold tracking-[-0.01em]'
+                    style='color: var(--color-text-primary);'
+                  >
+                    {tier.title}
+                  </h3>
+                  <p
+                    class='mt-1 max-w-xl text-sm leading-6'
+                    style='color: var(--color-text-secondary);'
+                  >
+                    {tier.detail}
+                  </p>
+                </div>
+                <div class='shrink-0 text-left sm:text-right'>
+                  <p
+                    class='text-2xl font-bold tracking-[-0.04em] sm:text-3xl'
+                    style='color: var(--color-brand-dark);'
+                  >
+                    {tier.price}
+                  </p>
+                  <p
+                    class='mt-1 text-xs font-medium uppercase tracking-[0.16em]'
+                    style='color: var(--color-text-secondary);'
+                  >
+                    Typical range
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+
+        <!-- What affects the price -->
+        <div
+          class='rounded-3xl border p-6'
+          style='border-color: var(--color-border); background-color: var(--color-surface);'
+        >
+          <div class='flex items-start gap-4'>
+            <div
+              class='grid h-11 w-11 shrink-0 place-items-center rounded-full'
+              style='background-color: var(--color-brand-soft); color: var(--color-brand-blue);'
+              set:html={ico('clock')}
+            />
+            <div>
+              <h3
+                class='text-base font-semibold'
+                style='color: var(--color-text-primary);'
+              >
+                What affects the price
+              </h3>
+              <p
+                class='mt-2 text-sm leading-6'
+                style='color: var(--color-text-secondary);'
+              >
+                The biggest variables are content, number of pages, booking tools, photos, menu or service lists,
+                and whether an existing site needs cleanup.
+              </p>
+            </div>
+          </div>
+          <div class='mt-6 flex flex-wrap gap-2.5'>
+            {
+              factors.map(f => (
+                <span
+                  class='inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium'
+                  style='border-color: var(--color-border); background-color: var(--color-surface); color: var(--color-brand-dark); box-shadow: 0 1px 2px rgba(var(--color-black-rgb),0.04);'
+                >
+                  <span
+                    style='color: var(--color-accent-teal);'
+                    set:html={ico('check-sm')}
+                  />
+                  {f}
+                </span>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

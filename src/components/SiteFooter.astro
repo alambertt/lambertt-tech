@@ -1,0 +1,42 @@
+---
+import { email } from '../lib/contact';
+const year = new Date().getFullYear();
+---
+
+<footer
+  class='border-t px-5 sm:px-8 py-8'
+  style='border-color: var(--color-border); background-color: var(--color-surface);'
+>
+  <div class='mx-auto max-w-6xl flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between'>
+    <div class='flex items-center gap-3'>
+      <img
+        src='/brand/logo-horizontal.svg'
+        alt='Lambertt Tech'
+        class='h-7 w-auto'
+        aria-hidden='true'
+      />
+      <p
+        class='text-sm'
+        style='color: var(--color-text-secondary);'
+      >
+        © {year} Lambertt Tech LLC
+      </p>
+    </div>
+    <div class='flex items-center gap-6'>
+      <a
+        href={`mailto:${email}`}
+        class='text-sm transition-opacity hover:opacity-70'
+        style='color: var(--color-text-secondary);'
+        >{email}</a
+      >
+      <a
+        href='https://alambertt.dev'
+        target='_blank'
+        rel='noopener noreferrer'
+        class='text-sm transition-opacity hover:opacity-70'
+        style='color: var(--color-text-secondary);'
+        >Engineering portfolio</a
+      >
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,191 @@
+---
+import { Image } from 'astro:assets';
+import { ico } from '../../lib/icons';
+
+const steps = [
+  {
+    num: '01',
+    icon: 'file-text',
+    title: 'Send the basics',
+    copy: 'Share your business name, what you offer, your current site if you have one, and a few examples you like.',
+  },
+  {
+    num: '02',
+    icon: 'palette',
+    title: 'I create a free mockup',
+    copy: 'You get a real one-page design direction so you can see the look and structure before spending anything.',
+  },
+  {
+    num: '03',
+    icon: 'pointer',
+    title: 'You decide what happens next',
+    copy: 'If it feels right, we build it. If not, there is no obligation and no pressure to keep going.',
+  },
+];
+
+const overlayCards = [
+  { eyebrow: 'Input', text: 'Business info, current site, examples' },
+  { eyebrow: 'Mockup', text: 'A real first design, not a pitch deck' },
+  { eyebrow: 'Decision', text: 'Move forward only if it makes sense' },
+];
+---
+
+<section
+  class='relative overflow-hidden border-y px-5 py-20 sm:px-8 lg:px-10'
+  style='border-color: var(--color-border); background: linear-gradient(to bottom, var(--color-background), var(--color-surface-2));'
+>
+  <div
+    class='pointer-events-none absolute left-1/2 top-0 h-80 w-80 -translate-x-1/2 rounded-full'
+    style='background-color: rgba(var(--color-blue-rgb),0.10); filter: blur(60px);'
+    aria-hidden='true'
+  >
+  </div>
+  <div class='mx-auto max-w-6xl relative'>
+    <div class='grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end'>
+      <div>
+        <p
+          class='mb-3 text-[11px] font-bold uppercase tracking-[0.24em]'
+          style='color: var(--color-brand-blue);'
+        >
+          How it works
+        </p>
+        <h2
+          class='max-w-xl text-4xl font-bold tracking-[-0.055em] sm:text-5xl'
+          style='color: var(--color-brand-dark);'
+        >
+          A simple start before any commitment.
+        </h2>
+        <p
+          class='mt-5 max-w-lg text-base leading-7'
+          style='color: var(--color-text-secondary);'
+        >
+          You do not need to know what platform, pages, or tools you need. Send the basics and I'll turn them into a
+          clear first direction.
+        </p>
+      </div>
+
+      <!-- Workspace image with overlaid steps -->
+      <div
+        class='relative rounded-3xl overflow-hidden'
+        style='box-shadow: 0 24px 56px -18px rgba(var(--color-navy-rgb),0.22);'
+      >
+        <Image
+          src='https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1100&h=800&fit=crop'
+          alt='Modern workspace with a laptop, coffee, and notebook'
+          width={1100}
+          height={800}
+          class='block w-full h-[340px] sm:h-[380px] object-cover'
+          loading='lazy'
+        />
+        <div
+          class='absolute inset-0'
+          style='background: linear-gradient(180deg, rgba(var(--color-navy-rgb),0) 35%, rgba(var(--color-navy-rgb),0.78) 100%);'
+          aria-hidden='true'
+        >
+        </div>
+        <div class='absolute left-5 right-5 bottom-5 grid gap-2 sm:grid-cols-3'>
+          {
+            overlayCards.map(card => (
+              <div
+                class='rounded-2xl px-3.5 py-3'
+                style='background-color: rgba(var(--color-surface-rgb),0.95); backdrop-filter: blur(8px);'
+              >
+                <p
+                  class='text-[10px] font-bold uppercase tracking-[0.18em]'
+                  style='color: var(--color-brand-blue);'
+                >
+                  {card.eyebrow}
+                </p>
+                <p
+                  class='mt-1 text-[13px] font-semibold leading-snug'
+                  style='color: var(--color-brand-dark);'
+                >
+                  {card.text}
+                </p>
+              </div>
+            ))
+          }
+        </div>
+        <div
+          class='absolute top-5 left-5 inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-[11px] font-semibold text-white'
+          style='background-color: rgba(var(--color-navy-rgb),0.55); backdrop-filter: blur(6px);'
+        >
+          <span
+            class='h-1.5 w-1.5 rounded-full'
+            style='background-color: var(--color-blue-bright);'></span>
+          Three steps, no contract
+        </div>
+      </div>
+    </div>
+
+    <!-- Steps -->
+    <div class='mt-12 grid gap-5 md:grid-cols-3'>
+      {
+        steps.map(s => (
+          <article
+            class='group relative rounded-3xl border p-6 transition duration-300 hover:-translate-y-1 hover:shadow-xl'
+            style='border-color: var(--color-border); background-color: var(--color-surface); box-shadow: 0 1px 3px rgba(var(--color-black-rgb),0.04);'
+          >
+            <div class='mb-8 flex items-start justify-between'>
+              <div
+                class='grid h-11 w-11 place-items-center rounded-full'
+                style='background-color: var(--color-brand-soft); color: var(--color-brand-blue);'
+                set:html={ico(s.icon)}
+              />
+              <span
+                class='grid h-9 w-9 place-items-center rounded-full border text-sm font-bold'
+                style='border-color: var(--color-border); background-color: var(--color-surface-2); color: var(--color-brand-dark);'
+              >
+                {s.num}
+              </span>
+            </div>
+            <h3
+              class='text-lg font-semibold tracking-[-0.02em]'
+              style='color: var(--color-text-primary);'
+            >
+              {s.title}
+            </h3>
+            <p
+              class='mt-3 text-sm leading-6'
+              style='color: var(--color-text-secondary);'
+            >
+              {s.copy}
+            </p>
+            <div
+              class='absolute inset-x-6 bottom-0 h-[3px] rounded-full opacity-0 transition group-hover:opacity-100'
+              style='background-color: var(--color-brand-blue);'
+            />
+          </article>
+        ))
+      }
+    </div>
+
+    <!-- CTA inline -->
+    <div
+      class='mt-10 rounded-3xl border px-7 py-7 sm:px-8 sm:py-8 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between'
+      style='border-color: var(--color-border); background-color: var(--color-surface);'
+    >
+      <div class='max-w-lg'>
+        <p
+          class='text-base font-semibold tracking-[-0.01em]'
+          style='color: var(--color-brand-dark);'
+        >
+          Ready to start with a free mockup?
+        </p>
+        <p
+          class='mt-1.5 text-sm leading-6'
+          style='color: var(--color-text-secondary);'
+        >
+          Send me your business info and I'll put together a first design direction before you decide anything.
+        </p>
+      </div>
+      <a
+        href='#contact'
+        class='shrink-0 inline-flex items-center justify-center gap-2 rounded-full px-7 text-sm font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg min-h-[48px]'
+        style='background-color: var(--color-brand-blue); box-shadow: 0 2px 12px 0 rgba(var(--color-blue-rgb),0.22);'
+      >
+        Get your free mockup <span set:html={ico('arrow-right')} />
+      </a>
+    </div>
+  </div>
+</section>

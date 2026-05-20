@@ -1,0 +1,47 @@
+---
+import { ico } from '../../lib/icons';
+
+const checks = ['Free mockup included', 'No long-term contracts', 'Mobile-first design'];
+---
+
+<div
+  class='border-y'
+  style='border-color: var(--color-border); background-color: var(--color-surface-2);'
+>
+  <div class='mx-auto max-w-6xl px-5 sm:px-8 py-5 md:py-6'>
+    <div class='flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between'>
+      <div class='flex items-center gap-3'>
+        <span
+          class='flex gap-0.5'
+          aria-label='5 stars'
+          style='color: var(--color-brand-blue);'
+        >
+          <span set:html={ico('star')} /><span set:html={ico('star')} /><span set:html={ico('star')} /><span
+            set:html={ico('star')}
+          /><span set:html={ico('star')} />
+        </span>
+        <span
+          class='text-sm font-medium'
+          style='color: var(--color-text-primary);'
+          >Trusted by local businesses across Palm Beach County</span
+        >
+      </div>
+      <div
+        class='flex flex-wrap gap-x-6 gap-y-2 text-sm'
+        style='color: var(--color-text-secondary);'
+      >
+        {
+          checks.map(c => (
+            <span class='flex items-center gap-1.5'>
+              <span
+                style='color: var(--color-accent-teal);'
+                set:html={ico('check')}
+              />
+              {c}
+            </span>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</div>
