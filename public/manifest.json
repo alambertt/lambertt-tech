@@ -1,0 +1,14 @@
+{
+  "name": "Lambertt Tech LLC",
+  "short_name": "Lambertt Tech",
+  "description": "Custom web design for local businesses in Jupiter, FL",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#1F4E89",
+  "background_color": "#FFFFFF",
+  "icons": [
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "/favicon-32.png", "sizes": "32x32", "type": "image/png" }
+  ]
+}

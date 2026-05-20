@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lambertttech.com/sitemap-index.xml
