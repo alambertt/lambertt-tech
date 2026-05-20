@@ -5,17 +5,56 @@
 }
 
 :root {
-  --color-background: #FFFFFF;
-  --color-surface: #FFFFFF;
-  --color-surface-2: #F8FAFC;
-  --color-text-primary: #111827;
-  --color-text-secondary: #64748B;
-  --color-brand-dark: #0B2A3D;
-  --color-brand-blue: #1F4E89;
-  --color-brand-blue-2: #2A6FBF;
-  --color-brand-soft: #DCE7F4;
-  --color-border: #E2E8F0;
-  --color-accent-teal: #0F766E;
+  /* ─────────── Canonical brand palette ───────────
+     Source of truth: Brand Identity System (Section 07).
+     Add new colors here, not inline. */
+
+  /* Primary */
+  --color-charcoal: #111827;
+  --color-navy: #0B2A3D;
+  --color-blue: #0F6BAE;
+  --color-blue-bright: #38BDF8;
+
+  /* Supporting */
+  --color-blue-soft: #D8ECFA;
+  --color-teal: #0F766E;
+
+  /* Neutrals */
+  --color-white: #FFFFFF;
+  --color-warm-white: #F8FAFC;
+  --color-cool-gray-100: #F1F5F9;
+  --color-cool-gray: #E2E8F0;
+  --color-slate-300: #CBD5E1;
+  --color-sky-300: #7DD3FC;
+  --color-slate-400: #94A3B8;
+  --color-slate: #64748B;
+
+  /* Status / non-brand accents */
+  --color-success-green: #4ADE80;
+  --color-mac-red: #FC5F57;
+  --color-mac-amber: #FEBC2E;
+  --color-mac-green: #27C840;
+
+  /* RGB tuples — use with rgba(var(--color-X-rgb), alpha) */
+  --color-white-rgb: 255, 255, 255;
+  --color-black-rgb: 0, 0, 0;
+  --color-navy-rgb: 11, 42, 61;
+  --color-blue-rgb: 15, 107, 174;
+  --color-blue-bright-rgb: 56, 189, 248;
+  --color-blue-soft-rgb: 216, 236, 250;
+
+  /* ─────────── Semantic aliases ─────────── */
+  --color-background: var(--color-white);
+  --color-surface: var(--color-white);
+  --color-surface-2: var(--color-warm-white);
+  --color-text-primary: var(--color-charcoal);
+  --color-text-secondary: var(--color-slate);
+  --color-brand-dark: var(--color-navy);
+  --color-brand-blue: var(--color-blue);
+  --color-brand-blue-2: var(--color-blue-bright);
+  --color-brand-soft: var(--color-blue-soft);
+  --color-border: var(--color-cool-gray);
+  --color-accent-teal: var(--color-teal);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -77,7 +116,7 @@ img { max-width: 100%; display: block; }
   width: 6px;
   height: 6px;
   border-radius: 9999px;
-  background: rgba(255,255,255,0.55);
+  background: rgba(var(--color-white-rgb), 0.55);
   border: 0;
   padding: 0;
   margin: 0;
@@ -85,9 +124,9 @@ img { max-width: 100%; display: block; }
   transition: all 350ms cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-block;
 }
-.carousel-dot:hover { background: rgba(255,255,255,0.8); }
-.carousel-dot.is-active { width: 20px; background: #ffffff; }
-.carousel-dot:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+.carousel-dot:hover { background: rgba(var(--color-white-rgb), 0.8); }
+.carousel-dot.is-active { width: 20px; background: var(--color-white); }
+.carousel-dot:focus-visible { outline: 2px solid var(--color-white); outline-offset: 2px; }
 @media (prefers-reduced-motion: reduce) {
   .carousel-slide, .carousel-slide-image, .carousel-dot { transition: none !important; }
   .carousel-slide-image { transform: none !important; }
