@@ -84,6 +84,10 @@
 :root[data-theme="dark"] .theme-icon-sun,
 :root[data-theme="dark"] .theme-toggle-label-sun  { display: inline-block; }
 
+.logo-dark { display: none; }
+:root[data-theme="dark"] .logo-light { display: none; }
+:root[data-theme="dark"] .logo-dark  { display: block; }
+
 #theme-toggle:hover,
 #theme-toggle-mobile:hover { background-color: var(--color-surface-2); }
 
