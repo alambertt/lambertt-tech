@@ -89,7 +89,8 @@
 :root[data-theme="dark"] .logo-dark  { display: block; }
 
 #theme-toggle:hover,
-#theme-toggle-mobile:hover { background-color: var(--color-surface-2); }
+#theme-toggle-mobile:hover,
+#theme-toggle-mobile:active { background-color: var(--color-surface-2); }
 
 *, *::before, *::after { box-sizing: border-box; }
 
