@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Analytics from "@vercel/analytics/astro";
 
 const phone = "(561) 555‑0000";
 const phoneHref = "tel:+15615550000";
@@ -155,12 +156,16 @@ const initials = (name: string) => name.replace(/[^A-Za-z]/g, "").charAt(0).toUp
   <body>
     <header class="topbar">
       <div class="wrap topbar-inner">
-        <div class="brand">
-          <span class="brand-mark" aria-hidden="true">L</span>
-          <span class="brand-name">
-            Lambertt Tech <span class="llc">LLC</span>
-          </span>
-        </div>
+        <a class="brand" href="/" aria-label="Lambertt Tech LLC — home">
+          <img
+            class="brand-logo"
+            src="/brand/logo-horizontal.svg"
+            alt="Lambertt Tech"
+            width="148"
+            height="37"
+          />
+          <span class="llc">LLC</span>
+        </a>
         <nav class="topbar-contact" aria-label="Contact">
           <a href={phoneHref}><span class="dot" aria-hidden="true"></span>{phone}</a>
           <a href={`mailto:${email}`}>{email}</a>
@@ -340,7 +345,14 @@ const initials = (name: string) => name.replace(/[^A-Za-z]/g, "").charAt(0).toUp
     <footer>
       <div class="wrap foot">
         <div class="left">
-          <span class="brand-mark" aria-hidden="true">L</span>
+          <img
+            class="foot-mark"
+            src="/brand/logo-icon.svg"
+            alt=""
+            width="22"
+            height="22"
+            aria-hidden="true"
+          />
           <span>Lambertt Tech LLC · &copy; {new Date().getFullYear()}</span>
         </div>
         <a href="https://alambertt.dev" target="_blank" rel="noopener">
@@ -348,5 +360,7 @@ const initials = (name: string) => name.replace(/[^A-Za-z]/g, "").charAt(0).toUp
         </a>
       </div>
     </footer>
+
+    <Analytics />
   </body>
 </html>

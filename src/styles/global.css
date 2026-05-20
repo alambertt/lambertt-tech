@@ -88,36 +88,30 @@ a {
   gap: 16px;
 }
 .brand {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   font-weight: 700;
   letter-spacing: -0.01em;
   font-size: 16px;
+  text-decoration: none;
+  color: inherit;
 }
-.brand-mark {
-  width: 26px;
-  height: 26px;
-  border-radius: 7px;
-  background: var(--accent);
-  color: var(--accent-ink);
-  display: inline-grid;
-  place-items: center;
-  font-family: var(--font);
-  font-weight: 800;
-  font-size: 14px;
-  letter-spacing: -0.02em;
+.brand-logo {
+  height: 32px;
+  width: auto;
+  display: block;
 }
-.brand-name {
-  display: flex;
-  align-items: baseline;
-  gap: 6px;
-}
-.brand-name .llc {
+.brand .llc {
   color: var(--ink-3);
   font-weight: 500;
   font-size: 13px;
   letter-spacing: 0.02em;
+}
+.foot-mark {
+  width: 22px;
+  height: 22px;
+  display: block;
 }
 .topbar-contact {
   display: flex;
