@@ -23,7 +23,9 @@ import SiteFooter from '../components/SiteFooter.astro';
   </head>
   <body>
     <SiteHeader />
-    <slot />
+    <main>
+      <slot />
+    </main>
     <SiteFooter />
 
     <script is:inline>
