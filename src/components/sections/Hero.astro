@@ -313,6 +313,7 @@ import { ico } from '../../lib/icons';
           alt="${s.imgAlt}"
           class="carousel-slide-image absolute inset-0 h-full w-full object-cover"
           loading="${i === 0 ? 'eager' : 'lazy'}"
+          fetchpriority="${i === 0 ? 'high' : 'auto'}"
           decoding="async"
           ${s.imgFallback ? `onerror="this.onerror=null;this.src='${s.imgFallback}';"` : ''}
         />
