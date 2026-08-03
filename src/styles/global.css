@@ -152,13 +152,6 @@ img { max-width: 100%; display: block; }
   pointer-events: auto;
   transition: opacity 700ms cubic-bezier(0.4, 0, 0.2, 1), visibility 0s;
 }
-.carousel-slide-image {
-  transform: scale(1.04);
-  transition: transform 7000ms ease-out;
-}
-.carousel-slide.is-active .carousel-slide-image {
-  transform: scale(1);
-}
 .carousel-dot {
   width: 6px;
   height: 6px;
@@ -175,8 +168,7 @@ img { max-width: 100%; display: block; }
 .carousel-dot.is-active { width: 20px; background: var(--color-white); }
 .carousel-dot:focus-visible { outline: 2px solid var(--color-white); outline-offset: 2px; }
 @media (prefers-reduced-motion: reduce) {
-  .carousel-slide, .carousel-slide-image, .carousel-dot { transition: none !important; }
-  .carousel-slide-image { transform: none !important; }
+  .carousel-slide, .carousel-dot { transition: none !important; }
 }
 
 /* Mobile nav CSS-only toggle */

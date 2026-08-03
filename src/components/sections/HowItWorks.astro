@@ -5,28 +5,34 @@ import { ico } from '../../lib/icons';
 const steps = [
   {
     num: '01',
-    icon: 'file-text',
-    title: 'Send the basics',
-    copy: 'Share your business name, what you offer, your current site if you have one, and a few examples you like.',
+    icon: 'compass',
+    title: 'Technical call',
+    copy: 'We walk through the problem, the systems already in place, and the constraints. You get an honest read on feasibility — including when the answer is that you should not build it.',
   },
   {
     num: '02',
-    icon: 'palette',
-    title: 'I create a free mockup',
-    copy: 'You get a real one-page design direction so you can see the look and structure before spending anything.',
+    icon: 'file-text',
+    title: 'Scope and architecture',
+    copy: 'A written proposal: what gets built, how it fits your stack, the sequence, the risks, and a fixed price or rate. Nothing starts before you approve it.',
   },
   {
     num: '03',
-    icon: 'pointer',
-    title: 'You decide what happens next',
-    copy: 'If it feels right, we build it. If not, there is no obligation and no pressure to keep going.',
+    icon: 'git-branch',
+    title: 'Build in visible increments',
+    copy: 'Work lands in your repository in reviewable pieces, with a standing check-in. You see progress continuously instead of waiting for a reveal.',
+  },
+  {
+    num: '04',
+    icon: 'rocket',
+    title: 'Ship and hand over',
+    copy: 'Deployed, documented, and transferred to your team — infrastructure as code, so nothing critical lives only in someone else’s head.',
   },
 ];
 
 const overlayCards = [
-  { eyebrow: 'Input', text: 'Business info, current site, examples' },
-  { eyebrow: 'Mockup', text: 'A real first design, not a pitch deck' },
-  { eyebrow: 'Decision', text: 'Move forward only if it makes sense' },
+  { eyebrow: 'Week 1', text: 'Scope, architecture, and a written plan' },
+  { eyebrow: 'Ongoing', text: 'Reviewable increments in your repo' },
+  { eyebrow: 'Handover', text: 'Documented, deployed, owned by you' },
 ];
 ---
 
@@ -47,20 +53,20 @@ const overlayCards = [
           class='mb-3 text-[11px] font-bold uppercase tracking-[0.24em]'
           style='color: var(--color-brand-blue);'
         >
-          How it works
+          How we engage
         </p>
         <h2
           class='max-w-xl text-4xl font-bold tracking-[-0.055em] sm:text-5xl'
           style='color: var(--color-brand-dark);'
         >
-          A simple start before any commitment.
+          Scoped before it is built.
         </h2>
         <p
           class='mt-5 max-w-lg text-base leading-7'
           style='color: var(--color-text-secondary);'
         >
-          You do not need to know what platform, pages, or tools you need. Send the basics and I'll turn them into a
-          clear first direction.
+          You do not need a finished spec to start the conversation. Bring the problem and the constraints — turning
+          that into an architecture and a plan is part of the work.
         </p>
       </div>
 
@@ -113,13 +119,13 @@ const overlayCards = [
           <span
             class='h-1.5 w-1.5 rounded-full'
             style='background-color: var(--color-blue-bright);'></span>
-          Three steps, no contract
+          Nothing built before it is approved
         </div>
       </div>
     </div>
 
     <!-- Steps -->
-    <div class='mt-12 grid gap-5 md:grid-cols-3'>
+    <div class='mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4'>
       {
         steps.map(s => (
           <article
@@ -170,13 +176,14 @@ const overlayCards = [
           class='text-base font-semibold tracking-[-0.01em]'
           style='color: var(--color-brand-dark);'
         >
-          Ready to start with a free mockup?
+          Have a system that needs building or fixing?
         </p>
         <p
           class='mt-1.5 text-sm leading-6'
           style='color: var(--color-text-secondary);'
         >
-          Send me your business info and I'll put together a first design direction before you decide anything.
+          Start with a technical call. You will leave it with a clearer picture of the problem whether or not we work
+          together.
         </p>
       </div>
       <a
@@ -184,7 +191,7 @@ const overlayCards = [
         class='shrink-0 inline-flex items-center justify-center gap-2 rounded-full px-7 text-sm font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg min-h-[48px]'
         style='background-color: var(--color-brand-blue); box-shadow: 0 2px 12px 0 rgba(var(--color-blue-rgb),0.22);'
       >
-        Get your free mockup <span set:html={ico('arrow-right')} />
+        Book a technical call <span set:html={ico('arrow-right')} />
       </a>
     </div>
   </div>

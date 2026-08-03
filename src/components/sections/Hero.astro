@@ -30,20 +30,20 @@ import { ico } from '../../lib/icons';
         >
           <span
             class='inline-flex'
-            set:html={ico('map-pin')}
+            set:html={ico('layers')}
           />
-          Based in Jupiter, Florida
+          Software engineering for growing companies
         </div>
 
         <h1
           class='animate-fade-up delay-100 text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl lg:text-[3.25rem]'
           style='color: var(--color-brand-dark);'
         >
-          Websites that help local businesses
+          We design and build software that
           <span
             class='whitespace-nowrap'
             style='color: var(--color-brand-blue);'
-            >get found.</span
+            >holds up at scale.</span
           >
         </h1>
 
@@ -51,7 +51,8 @@ import { ico } from '../../lib/icons';
           class='animate-fade-up delay-200 mt-5 text-lg leading-relaxed'
           style='color: var(--color-text-secondary);'
         >
-          Clean, mobile-first sites for salons, restaurants, boutiques, and local services across Palm Beach County.
+          Custom platforms, cloud infrastructure, and system integrations — from enterprise ERP and medical
+          diagnostics to AI agents and connected devices.
         </p>
 
         <div class='animate-fade-up delay-300 mt-8 flex flex-col gap-3 sm:flex-row sm:items-center'>
@@ -60,7 +61,7 @@ import { ico } from '../../lib/icons';
             class='inline-flex items-center justify-center gap-2.5 rounded-full px-8 text-base font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:shadow-2xl active:translate-y-0 min-h-[56px]'
             style='background-color: var(--color-brand-blue); box-shadow: 0 4px 20px 0 rgba(var(--color-blue-rgb),0.30);'
           >
-            Get a free mockup <span
+            Book a technical call <span
               class='inline-flex'
               set:html={ico('arrow-right')}
             />
@@ -70,7 +71,7 @@ import { ico } from '../../lib/icons';
             class='inline-flex items-center justify-center gap-2 rounded-full border px-8 text-base font-semibold transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 min-h-[56px]'
             style='background-color: var(--color-surface); border-color: var(--color-border); color: var(--color-brand-dark);'
           >
-            See examples
+            See our work
           </a>
         </div>
 
@@ -116,7 +117,7 @@ import { ico } from '../../lib/icons';
           class='relative w-full max-w-[480px] rounded-3xl border overflow-hidden'
           style='background-color: var(--color-surface); border-color: var(--color-border); box-shadow: 0 24px 64px -12px rgba(var(--color-navy-rgb),0.18), 0 4px 16px -4px rgba(var(--color-blue-rgb),0.14);'
           aria-roledescription='carousel'
-          aria-label='Sample local business websites'
+          aria-label='Systems we have designed and shipped'
         >
           <!-- Browser chrome -->
           <div
@@ -155,7 +156,7 @@ import { ico } from '../../lib/icons';
               <span
                 id='carousel-url'
                 class='transition-opacity duration-300'
-                >coastalcafe.com</span
+                >argus · erp</span
               >
             </div>
           </div>
@@ -174,14 +175,14 @@ import { ico } from '../../lib/icons';
             class='absolute z-20 flex items-center gap-1.5 rounded-full px-2.5 py-1.5'
             style='top: 64px; right: 12px; background-color: rgba(var(--color-navy-rgb),0.40); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);'
             role='tablist'
-            aria-label='Choose a sample website'
+            aria-label='Choose a project'
           >
           </div>
         </div>
 
         <!-- Floating badge: mobile-first -->
         <div
-          class='absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 rounded-2xl border px-4 py-3'
+          class='absolute -bottom-10 -right-3 sm:-bottom-12 sm:-right-5 rounded-2xl border px-4 py-3'
           style='background-color: var(--color-surface); border-color: var(--color-border); box-shadow: 0 8px 32px -4px rgba(var(--color-navy-rgb),0.16);'
           aria-hidden='true'
         >
@@ -189,20 +190,20 @@ import { ico } from '../../lib/icons';
             <span
               class='flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-white'
               style='background-color: var(--color-brand-blue);'
-              set:html={ico('smartphone')}
+              set:html={ico('cloud')}
             />
             <div>
               <p
                 class='text-xs font-bold'
                 style='color: var(--color-text-primary);'
               >
-                Mobile-first
+                Cloud-native
               </p>
               <p
                 class='text-[11px]'
                 style='color: var(--color-text-secondary);'
               >
-                Works on any device
+                AWS · GCP · Infrastructure as code
               </p>
             </div>
           </div>
@@ -218,23 +219,21 @@ import { ico } from '../../lib/icons';
             <span
               class='flex h-10 w-10 shrink-0 items-center justify-center rounded-full'
               style='background-color: var(--color-brand-soft); color: var(--color-brand-blue);'
-              set:html={ico('search-l')}
+              set:html={ico('shield')}
             />
             <div>
               <p
                 class='text-sm font-bold'
                 style='color: var(--color-text-primary);'
               >
-                Found on Google
+                Senior-led delivery
               </p>
-              <div
-                class='flex gap-0.5 mt-1'
-                style='color: var(--color-brand-blue);'
+              <p
+                class='text-[11px] mt-0.5'
+                style='color: var(--color-text-secondary);'
               >
-                <span set:html={ico('star')} /><span set:html={ico('star')} /><span
-                  set:html={ico('star')}
-                /><span set:html={ico('star')} /><span set:html={ico('star')} />
-              </div>
+                10+ years shipping production systems
+              </p>
             </div>
           </div>
         </div>
@@ -245,53 +244,54 @@ import { ico } from '../../lib/icons';
 
 <script is:inline>
   (function () {
-    const PHONE_SM =
-      '<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>';
-    const MAP_PIN_SM =
-      '<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>';
-
     const SLIDES = [
       {
-        name: 'Coastal Café',
-        slug: 'coastalcafe.com',
-        meta: 'Jupiter, FL · Open until 9 pm',
-        chips: ['Menu', 'Hours', 'Contact'],
-        cta: 'Order now',
-        footerCta: 'Get directions',
-        img: 'https://images.pexels.com/photos/1813504/pexels-photo-1813504.jpeg?auto=compress&cs=tinysrgb&w=960&h=540&fit=crop',
-        imgAlt: 'Warm, candlelit café interior with wood tables',
+        name: 'Argus Enterprises',
+        slug: 'argus · erp',
+        sector: 'Enterprise ERP',
+        role: 'Senior Software Engineer',
+        points: [
+          'Two ERP platforms built and deployed on AWS',
+          'Infrastructure as code with AWS CDK',
+          'Serverless services and internal tooling',
+        ],
+        stack: ['TypeScript', 'AWS CDK', 'Serverless'],
       },
       {
-        name: 'Palm Beauty Studio',
-        slug: 'palmbeautystudio.com',
-        meta: 'Jupiter, FL · Appointments available',
-        chips: ['Services', 'Stylists', 'Reviews'],
-        cta: 'Book now',
-        footerCta: 'View hours',
-        img: 'https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&cs=tinysrgb&w=960&h=540&fit=crop',
-        imgAlt: 'Elegant hair and beauty studio with a stylist at work',
+        name: 'Targeted Bioscience',
+        slug: 'targeted-bio · lims',
+        sector: 'Medical diagnostics',
+        role: 'Senior Software Engineer',
+        points: [
+          'Diagnostic workflow tooling for lab teams',
+          'Image processing pipeline',
+          'Python services behind a REST API',
+        ],
+        stack: ['Python', 'FastAPI', 'Imaging'],
       },
       {
-        name: 'BlueWave Home Services',
-        slug: 'bluewavehome.com',
-        meta: 'Palm Beach County · Same-week service',
-        chips: ['Services', 'Areas', 'Reviews'],
-        cta: 'Request quote',
-        footerCta: 'Service areas',
-        img: 'https://images.pexels.com/photos/4108714/pexels-photo-4108714.jpeg?auto=compress&cs=tinysrgb&w=960&h=540&fit=crop',
-        imgAlt: 'Modern Florida home exterior with manicured landscaping',
-        imgFallback:
-          'https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg?auto=compress&cs=tinysrgb&w=960&h=540&fit=crop',
+        name: 'SkillMil',
+        slug: 'skillmil · platform',
+        sector: 'Recruiting platform',
+        role: 'Senior Software Developer',
+        points: [
+          'AI chatbot agents running in production',
+          'Candidate matching across the platform',
+          'Full-stack feature delivery',
+        ],
+        stack: ['React', 'Node.js', 'AI agents'],
       },
       {
-        name: 'Shoreline Boutique',
-        slug: 'shorelineboutique.com',
-        meta: 'Jupiter, FL · New arrivals',
-        chips: ['Shop', 'Lookbook', 'Visit'],
-        cta: 'Shop now',
-        footerCta: 'Visit store',
-        img: 'https://images.pexels.com/photos/3965545/pexels-photo-3965545.jpeg?auto=compress&cs=tinysrgb&w=960&h=540&fit=crop',
-        imgAlt: 'Curated boutique clothing rack with elegant neutral tones',
+        name: 'Relampo',
+        slug: 'relampo · cli',
+        sector: 'Performance testing SaaS',
+        role: 'Cofounder',
+        points: [
+          'Load testing CLI written in Go',
+          'YAML-defined scenarios and distributed runs',
+          'SaaS platform around the engine',
+        ],
+        stack: ['Go', 'CLI', 'SaaS'],
       },
     ];
 
@@ -307,39 +307,28 @@ import { ico } from '../../lib/icons';
     <article class="carousel-slide ${i === 0 ? 'is-active' : ''}" role="tabpanel"
              aria-roledescription="slide" aria-label="${i + 1} of ${SLIDES.length}: ${s.name}"
              ${i !== 0 ? 'aria-hidden="true"' : ''}>
-      <div class="relative overflow-hidden" style="height: 220px;">
-        <img
-          src="${s.img}"
-          alt="${s.imgAlt}"
-          class="carousel-slide-image absolute inset-0 h-full w-full object-cover"
-          loading="${i === 0 ? 'eager' : 'lazy'}"
-          fetchpriority="${i === 0 ? 'high' : 'auto'}"
-          decoding="async"
-          ${s.imgFallback ? `onerror="this.onerror=null;this.src='${s.imgFallback}';"` : ''}
-        />
-        <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(var(--color-navy-rgb),0.05) 0%, rgba(var(--color-navy-rgb),0.65) 100%);" aria-hidden="true"></div>
-        <div class="absolute bottom-0 left-0 right-0 px-5 py-4">
-          <p class="text-base font-bold text-white leading-tight">${s.name}</p>
-          <p class="text-xs mt-0.5" style="color: rgba(var(--color-white-rgb),0.85);">${s.meta}</p>
+      <div class="relative overflow-hidden px-5 py-6" style="min-height: 132px; background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-brand-blue) 100%);">
+        <div class="pointer-events-none absolute inset-0" style="background-image: radial-gradient(circle, rgba(var(--color-white-rgb),0.5) 1px, transparent 1px); background-size: 22px 22px; opacity: 0.12;" aria-hidden="true"></div>
+        <div class="relative">
+          <p class="text-[10px] font-bold uppercase tracking-[0.2em]" style="color: rgba(var(--color-white-rgb),0.75);">${s.sector}</p>
+          <p class="mt-1.5 text-xl font-bold text-white leading-tight">${s.name}</p>
+          <p class="mt-1 text-xs" style="color: rgba(var(--color-white-rgb),0.8);">${s.role}</p>
         </div>
       </div>
-      <div class="px-5 py-4 space-y-3">
-        <div class="flex items-center justify-between gap-2" aria-hidden="true">
-          <div class="flex gap-5 pb-1">
-            ${s.chips.map((c, ci) => `<div class="text-xs ${ci === 0 ? 'font-semibold pb-1 border-b-2' : 'font-medium'}" style="${ci === 0 ? 'color: var(--color-text-primary); border-color: var(--color-text-primary);' : 'color: var(--color-text-secondary);'}">${c}</div>`).join('')}
-          </div>
-          <div class="rounded-lg px-3 py-1.5 text-xs font-semibold whitespace-nowrap" style="border: 1px solid rgba(var(--color-blue-rgb), 0.5); color: var(--color-brand-blue);">${s.cta}</div>
-        </div>
-        <div class="space-y-2" aria-hidden="true">
-          <div class="flex gap-2 items-center"><div class="h-2.5 w-2.5 rounded-full shrink-0" style="background-color: var(--color-accent-teal);"></div><div class="h-2 w-32 rounded-full" style="background-color: var(--color-brand-soft);"></div></div>
-          <div class="flex gap-2 items-center"><div class="h-2.5 w-2.5 rounded-full shrink-0" style="background-color: var(--color-accent-teal);"></div><div class="h-2 w-40 rounded-full" style="background-color: var(--color-brand-soft);"></div></div>
-          <div class="flex gap-2 items-center"><div class="h-2.5 w-2.5 rounded-full shrink-0" style="background-color: var(--color-accent-teal);"></div><div class="h-2 w-28 rounded-full" style="background-color: var(--color-brand-soft);"></div></div>
-        </div>
+      <div class="px-5 py-4">
+        <ul class="space-y-2.5">
+          ${s.points
+            .map(
+              p => `<li class="flex gap-2.5 items-start text-[13px] leading-snug" style="color: var(--color-text-secondary);">
+              <span class="mt-1.5 h-1.5 w-1.5 rounded-full shrink-0" style="background-color: var(--color-accent-teal);"></span>
+              <span>${p}</span>
+            </li>`,
+            )
+            .join('')}
+        </ul>
       </div>
-      <div class="flex items-center justify-between px-5 py-3 border-t" style="border-color: var(--color-border); background-color: var(--color-warm-white);" aria-hidden="true">
-        <div class="flex items-center gap-1.5"><span style="color: var(--color-brand-blue);">${PHONE_SM}</span><div class="h-2 w-20 rounded-full" style="background-color: var(--color-brand-soft);"></div></div>
-        <div class="flex items-center gap-1.5"><span style="color: var(--color-brand-blue);">${MAP_PIN_SM}</span><div class="h-2 w-16 rounded-full" style="background-color: var(--color-brand-soft);"></div></div>
-        <div class="text-xs font-semibold whitespace-nowrap inline-flex items-center gap-0.5" style="color: var(--color-brand-blue);">${s.footerCta} <span aria-hidden="true">&rsaquo;</span></div>
+      <div class="flex flex-wrap items-center gap-2 px-5 py-3 border-t" style="border-color: var(--color-border); background-color: var(--color-warm-white);">
+        ${s.stack.map(t => `<span class="rounded-full px-3 py-1 text-[11px] font-semibold" style="background-color: var(--color-brand-soft); color: var(--color-brand-blue);">${t}</span>`).join('')}
       </div>
     </article>
   `,
