@@ -6,6 +6,8 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://lambertttech.com',
+  // Astro 7 defaults to 'jsx' whitespace rules, which drop spaces between text and inline elements.
+  compressHTML: true,
   integrations: [
     sitemap({
       changefreq: 'monthly',
